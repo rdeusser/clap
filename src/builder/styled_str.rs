@@ -201,8 +201,7 @@ impl StyledStr {
             let mut color = termcolor::ColorSpec::new();
             match style {
                 Some(Style::Header) => {
-                    color.set_bold(true);
-                    color.set_underline(true);
+                    color.set_fg(Some(termcolor::Color::Yellow));
                 }
                 Some(Style::Literal) => {
                     color.set_bold(true);
